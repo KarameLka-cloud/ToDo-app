@@ -1,0 +1,23 @@
+.item {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 98%;
+  height: 600px;
+  background-color: #331e54;
+  border-radius: 20px;
+  padding: 10px;
+  overflow-y: scroll;
+  box-shadow: 1px 1px 3px gray;
+}
+
+.item::-webkit-scrollbar {
+  width: 0;
+}
+
+.none {
+  width: 98%;
+  color: white;
+  font-size: 1.3em;
+  text-align: center;
+  margin-top: 20px;
+}

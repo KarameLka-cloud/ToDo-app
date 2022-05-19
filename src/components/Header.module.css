@@ -1,0 +1,8 @@
+.item {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  border-top: 10px double #00539f;
+  border-bottom: 10px double #00539f;
+  color: #00539f;
+}

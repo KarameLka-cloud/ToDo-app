@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Header from './components/Header';
+import PostForm from './components/PostForm';
+import PostList from './components/PostList';
 
 function App() {
+  let [tasks, setTasks] = useState([]);
+
+  const createTask = (newTask) => {
+    setTasks([...tasks, newTask]);
+  };
+
+  const removeTask = (task) => {
+    setTasks(tasks.filter(t => t.id !== task.id));
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <PostForm create={createTask}/>
+      <PostList tasks={tasks} remove={removeTask}/>
     </div>
   );
 }
